@@ -25,7 +25,7 @@
             @include flexCenter;
             grid-row: 1 /span 3;
             grid-column: 1/ span 2;
-            font-size: 6rem;
+            font-size: 5.5rem;
             letter-spacing: 0;
             text-shadow: 1px 0 5px $text-shadow-color;
             position: relative;
@@ -37,7 +37,7 @@
             }
 
             .unit{
-                font-size: 1.6rem;
+                font-size: 4.1rem;
                 color: $fadecolor;
                 text-shadow: none;
                 position: absolute;

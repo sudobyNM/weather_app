@@ -1,5 +1,3 @@
-import  currentLocation from "./currentLocation.js";
-      //  const currentLoc = new currentLocation(); 
 
  export const setPlaceHolderText = () => {
     const input = document.getElementById("searchBar__text");
@@ -42,10 +40,26 @@ const toProperCase = (text) => {
 
 }
 
-
 const updateWeatherLocatonHeader = (message) => {
     const h1 = document.getElementById("currentForecast__location");
-    h1.textContent = message;
+    if (message.indexOf("Lat:") !== -1 && message.indexOf("Long:") !== -1) {
+        const msgArray = message.split(" ");
+        const mapArray = msgArray.map((msg) => {
+            return msg.replace(":", ": ");
+        });
+        const lat = 
+          mapArray[0].indexOf("-") === -1
+            ? mapArray[0].slice(0, 10)
+            : mapArray[0].slice(0, 11);
+        const lon = 
+          mapArray[1].indexOf("-") === -1
+            ? mapArray[1].slice(0, 11)
+            : mapArray[1].slice(0, 12);
+        h1.textContent = `${lat} • ${lon}`;   
+        
+    } else {
+      h1.textContent = message;
+    }
 }
 
 export const updateScreenReaderConfirmation = (message) => {
@@ -150,7 +164,7 @@ const createCurrentConditionsDivs = (weatherObj, unit) => {
     const icon = createMainImgDiv(weatherObj.current.weather[0].icon, weatherObj.current.weather[0].description);
 
 
-    const temp = createElem("div", "temp", `${Math.round(Number(weatherObj.current.temp))}˚ ${tempUnit}`);
+    const temp = createElem("div", "temp", `${Math.round(Number(weatherObj.current.temp))}˚`, tempUnit);
     const properDesc = toProperCase(weatherObj.current.weather[0].description);
     const desc = createElem("div", "desc", properDesc);
     const feels = createElem("div", "feels", `Feels like ${Math.round(Number(weatherObj.current.feels_like))}˚`);
