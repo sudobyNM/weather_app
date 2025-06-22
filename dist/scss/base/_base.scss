@@ -1,63 +1,104 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    background-color: $background-color;
-    background-image: url("../img/clouds.jpg");
-    background-size: cover;
-    background-blend-mode: overlay;
-    font-size: 16px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: $font-color;
-    @include mq(768px){
-        font-size: 22px;
+html {
+  background-size: cover;
+  background-image: url("../img/clouds.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: $font-color;
+  @include mq(768px) {
+    font-size: 20px;
+  }
+}
+
+body {
+  @include flexCenter;
+  flex-direction: column;
+  padding: 0.5rem;
+  min-height: 0;
+  // max-height: 100vh;
+}
+
+main {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: $font-color;
+  border: 1px solid $bordercolor;
+  border-radius: 10px;
+  background-color: rgba(92, 92, 92, 0.152);
+  box-shadow: 1px 1px 2.5px $shadowcolor;
+  backdrop-filter: blur(17px);
+  margin: 0.5rem auto 2rem auto;
+  padding: 0.5rem 0;
+
+  @media (max-width: 480px) {
+    min-height: 620px !important;
+    margin: 1.2rem auto !important;
+    padding: 0.8rem 0 !important;
+
+    .currentForecast .currentForecast__conditions {
+      padding: 0.8rem 0 !important;
     }
-}
 
+    .currentForecast .currentForecast__conditions .temp .unit {
+      top: 45%;
+      left: 65%;
+    }
 
-body{
-    width: 100%;
-    min-width: 100vh;
-    @include flexCenter;
-    flex-direction: column;
-    padding: 0.5rem;
-}
+    .searchBar .searchBar__form .searchBar__text {
+      font-size: 1.02rem;
+    }
+  }
 
-main{
-    width: 100%;
-    max-width: 700px;
-    max-height: 1050px;
-    display: flex;
-    flex-direction: column;
+  @media (max-width: 768px) {
+    min-height: 600px;
+    max-width: 450px;
     flex-grow: 1;
-    color: $font-color;
-    background-color: $mask-color;
-    border: 1px solid $bordercolor;
-    border-radius: 10px;
-    box-shadow: 1px 1px 2.5px $shadowcolor;
+
+    .currentForecast .currentForecast__location {
+      margin-top: 1rem;
+    }
+
+    .currentForecast .currentForecast__conditions {
+      padding: 0.6rem 0 !important;
+    }
+
+    .dailyForecast .dailyForecast__contents {
+      padding: 0.8rem 0;
+    }
+
+    hr {
+      margin: 1rem auto;
+    }
+  }
 }
 
-img{
-    display: block;
-
+img {
+  display: block;
 }
 
-hr{
-    width: 90%;
-    margin: auto;
-    border: 1px solid $bordercolor;
-
+hr {
+  width: 90%;
+  margin: 0.7rem auto;
+  border: 1px solid $bordercolor;
 }
 
 .none {
-    display: none;
+  display: none;
 }
 
-.block{
-    display: block;
+.block {
+  display: block;
 }

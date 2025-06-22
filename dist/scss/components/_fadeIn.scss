@@ -1,23 +1,22 @@
-.zero-vis{
-    visibility: hidden;
-    opacity: 0;
+.zero-vis {
+  visibility: hidden;
+  opacity: 0;
 }
 
-.fade-in{
-    visibility: visible;
-    opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-duration: 1.5s;
-
+.fade-in {
+  visibility: visible;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-duration: 1.5s;
 }
 
 @keyframes fadeInOpacity {
-    0%{
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100%{
+  100% {
     opacity: 1;
-    }
+  }
 }
