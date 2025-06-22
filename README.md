@@ -14,13 +14,12 @@ https://weather-app-5hgp.onrender.com/
 
 # Features
 
-🌤️ Search weather by city name or zip code (supports Indian zip codes)
-📍 Get weather for your current location
-🏠 Save a home location for quick access
-🌡️ Toggle between Celsius and Fahrenheit
-📅 6-day weather forecast
-⚡ Responsive, accessible, and mobile-friendly UI
-🔒 API key is never exposed to the frontend
+- 🌤️ Search weather by city name or zip code (supports Indian zip codes)
+- 📍 Get weather for your current location
+- 🏠 Save a home location for quick access
+- 🌡️ Toggle between Celsius and Fahrenheit
+- 📅 6-day weather forecast
+- 🔒 express/node for backend handling
 
 # Project Structure
 
