@@ -155,6 +155,7 @@ const submitNewLocation = async (event) => {
   } else {
     displayError("Connection Error", "Connection Error");
   }
+    document.getElementById("searchBar__text").value = "";
 };
 
 const updateDataAndDisplay = async (locationObj) => {
