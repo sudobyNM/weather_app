@@ -81,4 +81,6 @@ https://weather-app-5hgp.onrender.com/
 - Deploy the app using platforms like Heroku, Vercel, Render, etc.
 - Sites like Netlify can host the static files only, but ensure the backend is hosted separately or use a serverless function to handle API requests.
 
+MIT Licensing
+
 
