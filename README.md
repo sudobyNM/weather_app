@@ -19,7 +19,7 @@ https://weather-app-5hgp.onrender.com/
 - 🏠 Save a home location for quick access
 - 🌡️ Toggle between Celsius and Fahrenheit
 - 📅 6-day weather forecast
-- 🔒 express/node for backend handling
+- 🔒 express/node for backend handling API
 
 # Project Structure
 
@@ -79,8 +79,7 @@ https://weather-app-5hgp.onrender.com/
 # Deployment
 
 - Deploy the app using platforms like Heroku, Vercel, Render, etc.
-- Sites like Netlify can host the static files only, but ensure the backend is hosted separately or use a serverless function to handle API requests.
+- Sites like Netlify can host the static files only, ensure the backend is handled separately.
 
-MIT Licensing
 
 
