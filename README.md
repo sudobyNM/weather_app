@@ -10,7 +10,7 @@ The backend securely proxies requests to the OpenWeatherMap API, keeping your AP
 
 # Demo
 
-https://weather-app-5hgp.onrender.com/
+https://weather-app-rho-rose-63.vercel.app/
 
 # Features
 
